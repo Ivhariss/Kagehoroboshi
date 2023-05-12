@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class LightStatus : MonoBehaviour
 {
+    public static LightStatus instance;
+
     [SerializeField]
-    float LightHP = 0;
+   public float LightHP = 0; //アイテムの耐久値
 
     private float flashTime;
 
@@ -24,7 +26,7 @@ public class LightStatus : MonoBehaviour
      }
 
 
-   void flashItem()
+  public void flashItem()
     {
         if(LightHP >= 1) 
         {
