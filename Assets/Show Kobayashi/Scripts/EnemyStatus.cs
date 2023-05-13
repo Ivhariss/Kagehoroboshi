@@ -7,13 +7,13 @@ public class EnemyStatus : MonoBehaviour
 {
     //敵のステータス
     [System.Serializable]
-   public struct EnemyStatuses
+    public struct EnemyStatuses
     {
-        public string _enemyName;
-        public float _enemyHP;
-        public float _enemyAtk;
-        public float _enemySpeed;
-        public float _enemySearchRange;
+         public string _enemyName;
+         public float _enemyHP;
+         public float _enemyAtk;
+         public float _enemySpeed;
+         public float _enemySearchRange;
     }
 
     public List<EnemyStatuses> enemyStatuses = new List<EnemyStatuses>();
@@ -40,8 +40,7 @@ public class EnemyStatus : MonoBehaviour
                     eStatus._enemySpeed = StringToFloat(csvData[i][3]);
                     eStatus._enemySearchRange = StringToFloat(csvData[i][4]);
             enemyStatuses.Add(eStatus);
-            //enemyStatuses[i] = eStatus;
-            Debug.Log(enemyStatuses[i]._enemyName);
+
         }
     }
 
@@ -51,7 +50,7 @@ public class EnemyStatus : MonoBehaviour
         return n;
     }
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         CsvReader();
     }
