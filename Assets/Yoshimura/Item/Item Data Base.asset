@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: Item Data Base
   m_EditorClassIdentifier: 
   itemList:
+  - item: {fileID: 1179789650271714, guid: 4ef4628f5f55fbd43b9fd014cc065b34, type: 3}
+    Itemimage: {fileID: 21300000, guid: fd63a9be9fb21dd439d1ebf7214d26d5, type: 3}
+  - item: {fileID: 1002705123656268, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
+    Itemimage: {fileID: 21300000, guid: 244613eac8a24214c9e96e147077726b, type: 3}
   - item: {fileID: 0}
+    Itemimage: {fileID: 0}
   - item: {fileID: 0}
+    Itemimage: {fileID: 0}
   - item: {fileID: 0}
-  - item: {fileID: 0}
-  - item: {fileID: 0}
+    Itemimage: {fileID: 0}

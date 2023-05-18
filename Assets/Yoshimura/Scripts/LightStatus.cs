@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class LightStatus : MonoBehaviour
 {
+    
     public static LightStatus instance;
 
-    [SerializeField]
-   public float LightHP = 0; //アイテムの耐久値
+   
+    public float LightHP = 0; //アイテムの耐久値
 
-    private float flashTime;
+  
 
+   
     //Objectについてるlight
     public GameObject flashLight;
 
