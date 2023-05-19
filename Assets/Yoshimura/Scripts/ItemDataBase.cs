@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ItemDataBase : ScriptableObject
 {
-    public List<Item> itemList = new List<Item>();
+    public List<PoketItem> itemList = new List<PoketItem>();
 }
