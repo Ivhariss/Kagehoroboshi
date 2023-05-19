@@ -12,7 +12,8 @@ public class EnemyScript : MonoBehaviour
         Bird,
         Beast,
         Fish,
-        Ghost
+        Ghost,
+        Statue
     }
     [SerializeField] private float walkingTime = 0f;
     [SerializeField] private EnemyType pattern;
@@ -29,14 +30,22 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         playerObj = GameObject.Find("Player");
-        enemyStatus = GameObject.Find("EnemyStats").GetComponent<EnemyStatus>();
-       /* if (pattern == EnemyType.Bird)
+        enemyStatus = GameObject.Find("EnemyStats").GetComponent<EnemyStatus>();       
+    }
+    private void Update()
+    {
+        
+    }
+    //--------各敵キャラのアニメーション
+    private void BirdEnemyAnim()
+    {
+        if (pattern == EnemyType.Bird)
         {
 
         }
         else if (pattern == EnemyType.Beast)
         {
-            StartCoroutine(BeastEnemyAction());
+            //StartCoroutine(BeastEnemyAction());
         }
         else if (pattern == EnemyType.Fish)
         {
@@ -45,13 +54,11 @@ public class EnemyScript : MonoBehaviour
         else if (pattern == EnemyType.Ghost)
         {
 
-        }*/
-    }
+        }
+        else if (pattern == EnemyType.Statue)
+        {
 
-    //--------各敵キャラのアニメーション
-    private void BirdEnemyAnim()
-    {
-
+        }
     }
     private IEnumerator BeastEnemyAction()
     {
@@ -129,4 +136,5 @@ public class EnemyScript : MonoBehaviour
     {
 
     }
+    
 }
