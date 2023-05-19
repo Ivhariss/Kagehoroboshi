@@ -12,13 +12,12 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private float playerMoveSpeed = 1.0f;
     private Rigidbody rb;
     private PlayerAction playerAction;
-    [SerializeField] private float timeToDir = 0f;
+    [SerializeField] private float timeToDir = 0;
     private Animator animator;
     [SerializeField]private TextMeshProUGUI textMeshPro;
     private GameObject lightItem;
-    [SerializeField] private GameObject lighter;
-    [SerializeField] private GameObject ItemParent;
-    //private PlayerMove pm;
+   [SerializeField] private bool isCameraLocked = false;
+    private InputAction lockButton;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -26,11 +25,17 @@ public class PlayerController2 : MonoBehaviour
         playerAction = new PlayerAction();
         playerAction.Enable();
         rb = this.GetComponent<Rigidbody>();
+        lockButton = playerAction.FindAction("CameraLock");
     }
 
     //カメラの向いてる方向を正面として移動させる
     private void FixedUpdate()
     {
+        if (lockButton.IsPressed())
+        {
+            isCameraLocked = true;
+        }
+        else isCameraLocked = false;
         PlayerMove();
     }
 
@@ -50,10 +55,13 @@ public class PlayerController2 : MonoBehaviour
         }
         else animator.SetBool("Walking", false);
         //振り向き
-        if (moveDir != Vector3.zero)
+        if (moveDir != Vector3.zero && isCameraLocked == false)
         {
-            //transform.rotation = Quaternion.LookRotation(moveDir);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), timeToDir);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), timeToDir * Time.deltaTime);
+        }
+        else if(moveDir !=  Vector3.zero && isCameraLocked == true)
+        {
+            transform.rotation = Quaternion.LookRotation(cameraDir);
         }
  
     }
@@ -66,17 +74,7 @@ public class PlayerController2 : MonoBehaviour
         {
             textMeshPro.text = "PickUp";
             //この後に拾う入力を受け取り、手持ちの道具リストに入れる
-           /* if(Keyboard.current.kKey.isPressed)
-            {
-                lightItem = other.gameObject;
-                other.gameObject.SetActive(false);
-                lightItem.transform.parent = ItemParent.gameObject.transform;
-            }
-            else if(lightItem == null)
-            {
-                lightItem = lighter;
-                lightItem.transform.parent = ItemParent.gameObject.transform;
-            }*/
+           
         }
     }
     private void OnTriggerExit(Collider other)

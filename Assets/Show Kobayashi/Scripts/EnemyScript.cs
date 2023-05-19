@@ -15,126 +15,47 @@ public class EnemyScript : MonoBehaviour
         Ghost,
         Statue
     }
-    [SerializeField] private float walkingTime = 0f;
-    [SerializeField] private EnemyType pattern;
-    private int enemyAct;
-    private Vector3 playerPos;
-    private Vector3 currentPos;
-    private EnemyStatus enemyStatus;
-    private bool isWaiting = false;
-    [SerializeField] private GameObject playerObj;
-    /* MEMO
-     
-     
-     */
-    void Start()
+    [SerializeField]private EnemyType enemyType;
+    [SerializeField]private EnemyStatus enemyStatus;
+    [SerializeField] private float enemySeachRange;
+    private GameObject _player;
+    private float _distance;//敵からプレイヤーまでの距離
+
+    private void Start()
     {
-        playerObj = GameObject.Find("Player");
-        enemyStatus = GameObject.Find("EnemyStats").GetComponent<EnemyStatus>();       
+        _player = GameObject.Find("Player");
+
     }
     private void Update()
     {
-        
     }
-    //--------各敵キャラのアニメーション
-    private void BirdEnemyAnim()
-    {
-        if (pattern == EnemyType.Bird)
-        {
-
-        }
-        else if (pattern == EnemyType.Beast)
-        {
-            //StartCoroutine(BeastEnemyAction());
-        }
-        else if (pattern == EnemyType.Fish)
-        {
-
-        }
-        else if (pattern == EnemyType.Ghost)
-        {
-
-        }
-        else if (pattern == EnemyType.Statue)
-        {
-
-        }
-    }
-    private IEnumerator BeastEnemyAction()
-    {
-        if(Random.value < 0.5f)
-        {
-            yield return StartCoroutine(BeastWalk(0f));
-        }
-        else
-        {
-            yield return StartCoroutine (BeastWalk(0f));
-        }
-
-        isWaiting = false;
-        /*if(!isWaiting)
-        {
-            enemyAct = 0; //Random.Range(0, 2);
-            if (enemyAct == 0)//歩き
-            {
-                StartCoroutine(BeastWalk(0f));
-            }
-            else if (enemyAct == 1)//突進
-            {
-                StartCoroutine(BeastRush(0f));
-            }
-        }*/
-        
-
-    }
-    //獣キャラの歩く処理
-    private IEnumerator BeastWalk(float timer)
-    {
-        walkingTime = 5f;
-        isWaiting = false;
-        playerPos = playerObj.transform.position;
-        while (!isWaiting)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, playerPos, enemyStatus.enemyStatuses[1]._enemySpeed / 60 / 60 * Time.deltaTime);
-            timer += Time.deltaTime;
-            if(timer >= walkingTime)
-            {
-                isWaiting = true;
-            }
-        }
-        //isWaiting = false;
-        
-        yield return StartCoroutine(BeastEnemyAction());
-    }
-    //獣キャラの突進
-    private IEnumerator BeastRush(float timer)
-    {
-        walkingTime = 3f;
-        isWaiting = false;
-        Vector3 playerCurrentPos = playerObj.transform.position;
-        yield return new WaitForSeconds(1.0f);
-        timer = 0f;
-        while (!isWaiting)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, playerPos, enemyStatus.enemyStatuses[1]._enemySpeed / 60 / 60 * 6.5f * Time.deltaTime);
-            timer += Time.deltaTime;
-            if(timer >= walkingTime)
-            {
-                isWaiting = true;
-            }
-        }
-        //isWaiting = false;
-
-        yield return StartCoroutine(BeastEnemyAction());
-    }
-    private void FishEnemyAnim()
+    /// <summary>
+    /// プレイヤーが索敵外の時の動き
+    /// </summary>
+    void EnemyIdle()
     {
 
     }
 
-    private void GhostEnemyAnim()
+    /// <summary>
+    /// 敵の索敵と追跡
+    /// </summary>
+    /// <param name="enemyType"></param>
+    /// <param name="enemySearchRange"></param>
+    void EnemyAction(EnemyType enemyType, float enemySearchRange)
+    {
+        _distance = (_player.transform.position - transform.position).sqrMagnitude;
+        //索敵
+        if (_distance < enemySearchRange * enemySearchRange)
+        {
+            
+        }
+    }
+    /// <summary>
+    /// 敵の攻撃
+    /// </summary>
+    void EnemyAttack()
     {
 
     }
-    
 }
