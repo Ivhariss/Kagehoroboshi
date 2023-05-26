@@ -14,23 +14,21 @@ public class PlayerStatus : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-
+            Debug.Log("aaa");
+            Damage();
         }
     }
     private void Damage()
     {
         if(PlayerHP >= 0)
         {
-            //PlayerHP - [] = PlayerHP; 
+            PlayerHP -= 10;
         }
-        else if(PlayerHP <= 0)
+        else if(PlayerHP == 0)
         {
             Destroy(this.gameObject);
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Damage();
-    }
+
 }
