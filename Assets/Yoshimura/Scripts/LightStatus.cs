@@ -6,15 +6,12 @@ using System;
 
 public class LightStatus : MonoBehaviour
 {
+    [SerializeField] Item item;
     
     public static LightStatus instance;
 
-   
-    public float LightHP = 0; //アイテムの耐久値
+    public float LightHP; //アイテムの耐久値
 
-  
-
-   
     //Objectについてるlight
     public GameObject flashLight;
 
@@ -29,7 +26,6 @@ public class LightStatus : MonoBehaviour
         flashItem();
      }
 
-
   public void flashItem()
     {
         if(LightHP >= 1) 
@@ -39,12 +35,24 @@ public class LightStatus : MonoBehaviour
                
         }
 
-
         if (1 >= LightHP)
         {
             flashLight.SetActive(false);
         }
 
+    }
+
+     void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("aaa");
+
+        ItemBox.instance.SetItem(item);
+
+        if (Input.GetKeyUp(KeyCode.Space)&&collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("www");
+           
+        }
     }
 
 

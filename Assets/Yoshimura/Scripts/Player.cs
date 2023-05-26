@@ -20,8 +20,6 @@ public class Player : MonoBehaviour
     {
 
 
-       
-
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
