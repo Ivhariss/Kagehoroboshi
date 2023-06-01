@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Ayumu_Hayashi/Scenes/PauseMenuUI.unity.meta
 guid: d1258aef1b56bce4e8dd726b9c371681
+========
+guid: 19cb7317715f3e7429ffed8f82ceea80
+folderAsset: yes
+>>>>>>>> origin/yoshimura:Assets/Yoshimura/Images.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
