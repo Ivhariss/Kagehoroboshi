@@ -30,7 +30,7 @@ public class EnemyScript : MonoBehaviour
     {
         _player = GameObject.Find("Player");
         agent = this.GetComponent<NavMeshAgent>();
-        EnemyAction(this.enemyType, 10f);
+        //EnemyAction(this.enemyType, 10f);
 
     }
     private void Update()
@@ -50,7 +50,7 @@ public class EnemyScript : MonoBehaviour
     /// </summary>
     /// <param name="enemyType"></param>
     /// <param name="enemySearchRange"></param>
-    void EnemyAction(EnemyType enemyType, float enemySearchRange)
+   /* void EnemyAction(EnemyType enemyType, float enemySearchRange)
     {       
         _distance = (_player.transform.position - transform.position).sqrMagnitude;
         //õ“G
@@ -146,5 +146,5 @@ public class EnemyScript : MonoBehaviour
         yield return null;
     }
 
-    //----------ŒF‚ÌUŒ‚ˆ—----------
+    //----------ŒF‚ÌUŒ‚ˆ—----------*/
 }

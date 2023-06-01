@@ -441,6 +441,10 @@ PrefabInstance:
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 9137807055262805646}
+    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
+      propertyPath: enemyStatus
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1720,6 +1724,10 @@ PrefabInstance:
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 9137807055262805646}
+    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
+      propertyPath: enemyStatus
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1845,7 +1853,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 2
+    m_MaxSpeed: 0
     m_AccelTime: 0.2
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -2314,23 +2322,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520968136044789530, guid: 94e485784c006894b881887acb7bd6c6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.67
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 4520968136044789530, guid: 94e485784c006894b881887acb7bd6c6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9991979
+      value: 0.9914449
       objectReference: {fileID: 0}
     - target: {fileID: 4520968136044789530, guid: 94e485784c006894b881887acb7bd6c6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.040044688
+      value: -0.13052624
       objectReference: {fileID: 0}
     - target: {fileID: 4520968136044789530, guid: 94e485784c006894b881887acb7bd6c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -4.59
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520968136044789531, guid: 94e485784c006894b881887acb7bd6c6, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4520968136044789533, guid: 94e485784c006894b881887acb7bd6c6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4556693026504197506, guid: 94e485784c006894b881887acb7bd6c6, type: 3}
       propertyPath: m_Range
@@ -4041,9 +4053,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1373333832}
     m_Modifications:
     - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
+      propertyPath: enemyType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 9137807055262805646}
+    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
+      propertyPath: enemyStatus
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 0
