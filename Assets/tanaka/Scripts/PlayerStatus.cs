@@ -10,20 +10,25 @@ public class PlayerStatus : MonoBehaviour
     //private float MoveSpeed;
     // Start is called before the first frame update
 
+    private void OncollisionEnter3D(Collider collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("aaa");
+            Damage();
+        }
+    }
     private void Damage()
     {
         if(PlayerHP >= 0)
         {
-            //PlayerHP - [] = PlayerHP; 
+            PlayerHP -= 10;
         }
-        else if(PlayerHP <= 0)
+        else if(PlayerHP == 0)
         {
             Destroy(this.gameObject);
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Damage();
-    }
+
 }
