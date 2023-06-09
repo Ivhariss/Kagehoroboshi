@@ -11,7 +11,7 @@ public class LightStatus : MonoBehaviour
     public static LightStatus instance;
 
     public float LightHP; //アイテムの耐久値
-
+    public bool isPicked = false;
     //Objectについてるlight
     public GameObject flashLight;
 
@@ -23,7 +23,11 @@ public class LightStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        flashItem();
+        if (isPicked == true)
+        {
+            flashItem();
+        }
+        
      }
 
   public void flashItem()
@@ -42,18 +46,18 @@ public class LightStatus : MonoBehaviour
 
     }
 
-     void OnCollisionEnter(Collision collision)
+    /*void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("aaa");
-
+        //Debug.Log("aaa");
         ItemBox.instance.SetItem(item);
 
-        if (Input.GetKeyUp(KeyCode.Space)&&collision.gameObject.CompareTag("Player"))
+
+        if (Input.GetKeyUp(KeyCode.F) && collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("www");
-           
+            
         }
-    }
+    }*/
 
 
 }

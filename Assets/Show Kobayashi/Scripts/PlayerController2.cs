@@ -18,6 +18,10 @@ public class PlayerController2 : MonoBehaviour
     private GameObject lightItem;
    [SerializeField] private bool isCameraLocked = false;
     private InputAction lockButton;
+    [SerializeField] private Item item;
+    [SerializeField]private Slot slot;
+    [SerializeField] private ItemList itemList;
+    [SerializeField] private Transform toolPos;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -70,11 +74,34 @@ public class PlayerController2 : MonoBehaviour
     //アイテム拾う処理
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Item")
+        if (other.gameObject.CompareTag("Item"))
         {
+            LightStatus lightStatus = other.GetComponent<LightStatus>();
             textMeshPro.text = "PickUp";
             //この後に拾う入力を受け取り、手持ちの道具リストに入れる
-           
+           if(playerAction.Player.PickUp.WasPressedThisFrame() == true)
+            {
+                //ここに拾っているアイテム番号を入れる(Slotのアイテムスプライト配列番号参照)
+                switch(other.gameObject.name)
+                {
+                    case "HandLight":
+                        slot.SetItem(1);
+                        other.gameObject.SetActive(false);
+                        textMeshPro.text = string.Empty;
+                        itemList.InstantiateItem(1);
+                        break;
+                    default:
+                        slot.SetItem(0);
+                        itemList.InstantiateItem(0);
+                        break;
+                }
+                
+               
+
+                
+                lightStatus.isPicked = true;
+                
+            }
         }
     }
     private void OnTriggerExit(Collider other)

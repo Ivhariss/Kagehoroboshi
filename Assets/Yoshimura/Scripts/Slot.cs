@@ -7,19 +7,44 @@ using UnityEngine.UI;
 public class Slot : MonoBehaviour
 {
     Image image;
-
+    /*
+     * スプライト配列の番号
+     ライター : 0
+     懐中電灯 : 1
+     
+     
+     
+     
+     */
+    [SerializeField] private Sprite[] itemImage;
+    static public int itemImageIndex = 0;
     private void Awake()
     {
-        image = GetComponent<Image>();
+       image = GetComponent<Image>();
     }
 
-    public void SetItem(Item item)
+    public void SetItem(int itemImageIdx)
     {
-        UpdateImage(item);
+        
+        //UI表示のアイテムの切り替えスプライト配列参照
+        switch(itemImageIdx)
+        {
+            case 1:
+                UpdateImage(itemImage[itemImageIdx]);
+                break;
+            case 2:
+                UpdateImage(itemImage[itemImageIdx]);
+                break;
+            default:
+                UpdateImage(itemImage[0]);
+                break;
+
+        }
+        
     }
 
-    void UpdateImage(Item item)
+    void UpdateImage(Sprite item)
     {
-        image.sprite = item.sprite;
+        image.sprite = item;
     }
 }

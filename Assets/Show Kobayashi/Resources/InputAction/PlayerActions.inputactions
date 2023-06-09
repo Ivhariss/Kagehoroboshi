@@ -304,6 +304,17 @@
                     "action": "CameraLock",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e399e6e-15a6-4876-84cc-e3685e9a67c1",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "CameraLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
