@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class LightStatus : MonoBehaviour
 {
+    [SerializeField] Item item;
+    
     public static LightStatus instance;
 
-    [SerializeField]
-   public float LightHP = 0; //アイテムの耐久値
-
-    private float flashTime;
-
+    public float LightHP; //アイテムの耐久値
+    public bool isPicked = false;
     //Objectについてるlight
     public GameObject flashLight;
 
@@ -22,9 +23,12 @@ public class LightStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        flashItem();
+        if (isPicked == true)
+        {
+            flashItem();
+        }
+        
      }
-
 
   public void flashItem()
     {
@@ -35,13 +39,25 @@ public class LightStatus : MonoBehaviour
                
         }
 
-
         if (1 >= LightHP)
         {
             flashLight.SetActive(false);
         }
 
     }
+
+    /*void OnCollisionEnter(Collision collision)
+    {
+        //Debug.Log("aaa");
+        ItemBox.instance.SetItem(item);
+
+
+        if (Input.GetKeyUp(KeyCode.F) && collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("www");
+            
+        }
+    }*/
 
 
 }
