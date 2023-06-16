@@ -21,7 +21,10 @@ public class EnemyDmgCtrl : MonoBehaviour
     }
     void Start()
     {
+<<<<<<< HEAD
         Debug.Log(enemyStatus.enemyStatuses[enemyTypeNum]._enemyHP);
+=======
+>>>>>>> origin/tanaka
         maxHealth = enemyStatus.enemyStatuses[enemyTypeNum]._enemyHP;
         currentHealth = maxHealth;
         Renderer renderer = GetComponent<Renderer>();

@@ -8,13 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SanoKanamu/Scenes/Title.unity
     guid: 0ad2cfb79feda874ca1deb0af891d77f
-  - enabled: 1
+  - enabled: 0
     path: Assets/SanoKanamu/Scenes/Game.unity
     guid: 3a6fc159d3c324f409c67b99216483a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/SanoKanamu/Scenes/Pause.unity
     guid: 19b13b20a9c304140b80bc89bb4ce18a
-  - enabled: 1
+  - enabled: 0
     path: Assets/SanoKanamu/Scenes/GameOver.unity
     guid: 6ae5dacaf9198e84baa559e4fa00c5fa
+  - enabled: 1
+    path: Assets/Scenes/MainGameScene.unity
+    guid: efecc7c1decc0244bbc6b644792ac300
+  - enabled: 1
+    path: Assets/Scenes/Clear.unity
+    guid: b5431f207a7899e47b0fe774583ac5ab
   m_configObjects: {}

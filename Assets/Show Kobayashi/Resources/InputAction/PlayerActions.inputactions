@@ -40,6 +40,18 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "name": "CameraLock",
+                    "type": "Button",
+                    "id": "5cf703df-aee9-422d-8d51-b261e9fff8b1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+>>>>>>> origin/tanaka
                 }
             ],
             "bindings": [
@@ -284,6 +296,31 @@
                     "action": "PickUp",
                     "isComposite": false,
                     "isPartOfComposite": false
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "name": "",
+                    "id": "041e8512-46a0-4f1b-9b0c-720f9f0e0a9c",
+                    "path": "<DualShockGamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "CameraLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e399e6e-15a6-4876-84cc-e3685e9a67c1",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "CameraLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+>>>>>>> origin/tanaka
                 }
             ]
         },

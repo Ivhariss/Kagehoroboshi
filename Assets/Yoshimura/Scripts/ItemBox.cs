@@ -12,8 +12,8 @@ public class ItemBox : MonoBehaviour
             instance = this;
     }
 
-    public void SetItem(Item item)
+    /*public void SetItem()
     {
-        slot.SetItem(item);
-    }
+        slot.SetItem();
+    }*/
 }

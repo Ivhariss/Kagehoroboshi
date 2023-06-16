@@ -12,6 +12,7 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private float playerMoveSpeed = 1.0f;
     private Rigidbody rb;
     private PlayerAction playerAction;
+<<<<<<< HEAD
     [SerializeField] private float timeToDir = 0f;
     private Animator animator;
     [SerializeField]private TextMeshProUGUI textMeshPro;
@@ -19,6 +20,18 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private GameObject lighter;
     [SerializeField] private GameObject ItemParent;
     //private PlayerMove pm;
+=======
+    [SerializeField] private float timeToDir = 0;
+    private Animator animator;
+    [SerializeField]private TextMeshProUGUI textMeshPro;
+    private GameObject lightItem;
+   [SerializeField] private bool isCameraLocked = false;
+    private InputAction lockButton;
+    [SerializeField] private Item item;
+    [SerializeField]private Slot slot;
+    [SerializeField] private ItemList itemList;
+    [SerializeField] private Transform toolPos;
+>>>>>>> origin/tanaka
     // Start is called before the first frame update
     private void Awake()
     {
@@ -26,11 +39,23 @@ public class PlayerController2 : MonoBehaviour
         playerAction = new PlayerAction();
         playerAction.Enable();
         rb = this.GetComponent<Rigidbody>();
+<<<<<<< HEAD
+=======
+        lockButton = playerAction.FindAction("CameraLock");
+>>>>>>> origin/tanaka
     }
 
     //カメラの向いてる方向を正面として移動させる
     private void FixedUpdate()
     {
+<<<<<<< HEAD
+=======
+        if (lockButton.IsPressed())
+        {
+            isCameraLocked = true;
+        }
+        else isCameraLocked = false;
+>>>>>>> origin/tanaka
         PlayerMove();
     }
 
@@ -50,10 +75,20 @@ public class PlayerController2 : MonoBehaviour
         }
         else animator.SetBool("Walking", false);
         //振り向き
+<<<<<<< HEAD
         if (moveDir != Vector3.zero)
         {
             //transform.rotation = Quaternion.LookRotation(moveDir);
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), timeToDir);
+=======
+        if (moveDir != Vector3.zero && isCameraLocked == false)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), timeToDir * Time.deltaTime);
+        }
+        else if(moveDir !=  Vector3.zero && isCameraLocked == true)
+        {
+            transform.rotation = Quaternion.LookRotation(cameraDir);
+>>>>>>> origin/tanaka
         }
  
     }
@@ -62,6 +97,7 @@ public class PlayerController2 : MonoBehaviour
     //アイテム拾う処理
     private void OnTriggerStay(Collider other)
     {
+<<<<<<< HEAD
         if (other.gameObject.tag == "Item")
         {
             textMeshPro.text = "PickUp";
@@ -77,6 +113,36 @@ public class PlayerController2 : MonoBehaviour
                 lightItem = lighter;
                 lightItem.transform.parent = ItemParent.gameObject.transform;
             }*/
+=======
+        if (other.gameObject.CompareTag("Item"))
+        {
+            LightStatus lightStatus = other.GetComponent<LightStatus>();
+            textMeshPro.text = "PickUp";
+            //この後に拾う入力を受け取り、手持ちの道具リストに入れる
+           if(playerAction.Player.PickUp.WasPressedThisFrame() == true)
+            {
+                //ここに拾っているアイテム番号を入れる(Slotのアイテムスプライト配列番号参照)
+                switch(other.gameObject.name)
+                {
+                    case "HandLight":
+                        slot.SetItem(1);
+                        other.gameObject.SetActive(false);
+                        textMeshPro.text = string.Empty;
+                        itemList.InstantiateItem(1);
+                        break;
+                    default:
+                        slot.SetItem(0);
+                        itemList.InstantiateItem(0);
+                        break;
+                }
+                
+               
+
+                
+                lightStatus.isPicked = true;
+                
+            }
+>>>>>>> origin/tanaka
         }
     }
     private void OnTriggerExit(Collider other)

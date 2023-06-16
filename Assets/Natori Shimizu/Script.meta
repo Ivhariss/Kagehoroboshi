@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 708d72e6659cd56428ff8bac0bb96952
+=======
+guid: 646a818a185e3ef4092e08d0afe00764
+>>>>>>> origin/tanaka
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

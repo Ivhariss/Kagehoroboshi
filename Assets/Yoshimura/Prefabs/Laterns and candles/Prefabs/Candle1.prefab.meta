@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Yoshimura/Prefabs/Laterns and candles/Prefabs/Candle1.prefab.meta
 guid: 86d84285ef39db64c986f37878b14861
 timeCreated: 1497360577
+=======
+guid: cd151dbf9a7a70e46aa6dc10a1414ce0
+timeCreated: 1512857422
+>>>>>>> origin/tanaka:Assets/Yoshimura/Prefabs/Lighter_Prefab.prefab.meta
 licenseType: Store
 NativeFormatImporter:
   mainObjectFileID: 100100000

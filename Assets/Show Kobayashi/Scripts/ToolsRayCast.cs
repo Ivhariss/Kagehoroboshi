@@ -13,7 +13,11 @@ public class ToolsRayCast : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy"))
         {
             dmgCtrl = other.gameObject.GetComponent<EnemyDmgCtrl>();
+<<<<<<< HEAD
             Debug.Log(other.GetComponent<EnemyDmgCtrl>());
+=======
+            
+>>>>>>> origin/tanaka
             dmgCtrl.TakeDmg(dmgAmount);
         }
     }
