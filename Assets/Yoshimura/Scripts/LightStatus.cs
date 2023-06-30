@@ -5,13 +5,13 @@ using System;
 
 
 public class LightStatus : MonoBehaviour
-{
-    [SerializeField] Item item;
+{ 
     
     public static LightStatus instance;
 
+    [SerializeField]
     public float LightHP; //アイテムの耐久値
-    public bool isPicked = false;
+   // public bool isPicked = false;
     //Objectについてるlight
     public GameObject flashLight;
 
@@ -22,12 +22,8 @@ public class LightStatus : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (isPicked == true)
-        {
+    {     
             flashItem();
-        }
-        
      }
 
   public void flashItem()

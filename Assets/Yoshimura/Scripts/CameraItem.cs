@@ -4,43 +4,51 @@ using UnityEngine;
 
 public class CameraItem : MonoBehaviour
 {
-    private int flashCount = 3;
+    //à»â∫2Ç¬ïKê{
+    public GameObject slight;
+    float SpotAngle;
 
-    public GameObject flash;
+    [SerializeField]
+    float flashtime;
+    [SerializeField]
+    float flash;
+    [SerializeField]
+    public static int flashCount;
 
+    // Use this for initialization
     void Start()
     {
-        flash.SetActive(false);
+        SpotAngle = slight.GetComponent<Light>().spotAngle;
+        SpotAngle = 0f;
+        slight.GetComponent<Light>().spotAngle = SpotAngle;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        if(Input.GetKeyDown(KeyCode.Space)&& flashCount > 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            flashCount--;
-
-            flash.SetActive(true);
-
-          //  StartCoroutine(DelayCoroutine());
+            StartCoroutine(WaitProcess());
         }
-       
-        if(flashCount == 0)
-        {
-            this.gameObject.SetActive(false);
-        }
-      
     }
 
-    /*private IEnumerator DelayCoroutine()
+    IEnumerator WaitProcess()
     {
-        flash.SetActive(false);
+        while (SpotAngle < 100f)
+        {
+            SpotAngle += flash;
+            slight.GetComponent<Light>().spotAngle = SpotAngle;
 
-        // 3ïbä‘ë“Ç¬
-        yield return new WaitForSeconds(1);
+            // éwíËÇµÇΩïbêîÇæÇØèàóùÇë“ÇøÇ‹Ç∑ÅB(Ç±Ç±Ç≈ÇÕ1.0ïb)
+            yield return new WaitForSeconds(flashtime);
+        }
 
-        
+        while (0 < SpotAngle)
+        {
+            SpotAngle -= flash;
+            slight.GetComponent<Light>().spotAngle = SpotAngle;
+
+        }
     }
-    */
 }
