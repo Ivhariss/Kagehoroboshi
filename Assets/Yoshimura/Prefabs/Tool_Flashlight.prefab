@@ -223,9 +223,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492ca672dabd1214db700280a2c1faa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    type: 0
-    sprite: {fileID: 0}
   LightHP: 20
-  isPicked: 0
-  flashLight: {fileID: 1734591770113951573}
+  flashLight: {fileID: 8867366256940680510}

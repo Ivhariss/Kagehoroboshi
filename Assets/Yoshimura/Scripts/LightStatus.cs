@@ -37,23 +37,8 @@ public class LightStatus : MonoBehaviour
 
         if (1 >= LightHP)
         {
-            flashLight.SetActive(false);
+            Destroy(flashLight);
         }
 
     }
-
-    /*void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log("aaa");
-        ItemBox.instance.SetItem(item);
-
-
-        if (Input.GetKeyUp(KeyCode.F) && collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("www");
-            
-        }
-    }*/
-
-
 }

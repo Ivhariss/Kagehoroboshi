@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Show Kobayashi/Resources/Texture/NewLayer.terrainlayer.meta
+guid: c84de578daa78964ab88a23563b4546b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+========
+guid: ccf30a7ca94a6f344ac4bbc1ce5454cf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+>>>>>>>> origin/tanaka:Assets/Show Kobayashi/Scene/TestGamePlay/NavMesh.asset.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

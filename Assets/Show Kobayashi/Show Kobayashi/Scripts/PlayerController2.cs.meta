@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Show Kobayashi/Scripts/PlayerController2.cs.meta
+guid: ea64334db6b297440b2c537570bfb9e2
+========
+guid: 3af8b5b684f106945a1ee830a280ee05
+>>>>>>>> origin/tanaka:Assets/Show Kobayashi/Resources/InputAction/PlayerActions.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,7 +13,7 @@ public class CameraItem : MonoBehaviour
     [SerializeField]
     float flash;
     [SerializeField]
-    public static int flashCount;
+    public int flashCount;
 
     // Use this for initialization
     void Start()
@@ -27,9 +27,10 @@ public class CameraItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && flashCount >0)
         {
             StartCoroutine(WaitProcess());
+            flashCount--;
         }
     }
 
