@@ -287,14 +287,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114018286}
-  m_LocalRotation: {x: 0.123842716, y: 0.040860597, z: -0.0051039406, w: 0.99144715}
+  m_LocalRotation: {x: -0.19824575, y: -0.04189761, z: -0.008482287, w: 0.9792198}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 14.24, y: 4.72, z: 0}
+  m_LocalEulerAnglesHint: {x: -22.89, y: -4.9, z: 0}
 --- !u!1001 &174469405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,14 +302,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373333832}
     m_Modifications:
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 9137807055262805646}
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: enemyStatus
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -393,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 715183399786655136, guid: 53c4cb0ab3f66d74892021d9bdc3f158, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 715183399786655136, guid: 53c4cb0ab3f66d74892021d9bdc3f158, type: 3}
       propertyPath: m_AnchorMax.x
@@ -516,6 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -738,14 +731,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373333832}
     m_Modifications:
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 9137807055262805646}
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: enemyStatus
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -866,7 +851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574639819}
   m_LocalRotation: {x: 0.24326594, y: -0.008567395, z: 0.0021487924, w: 0.96991944}
-  m_LocalPosition: {x: 0.031791687, y: 0.5, z: -1.7997198}
+  m_LocalPosition: {x: 0.0317955, y: 0.5, z: -1.7997198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1169,7 +1154,7 @@ Transform:
   - {fileID: 308171859}
   - {fileID: 240558492}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &883936818 stripped
 Transform:
@@ -1338,7 +1323,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252254411}
-  m_LocalRotation: {x: 0.24161926, y: -0.008571516, z: 0.0021343678, w: 0.97033095}
+  m_LocalRotation: {x: 0.24161927, y: -0.008571147, z: 0.002134276, w: 0.97033095}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1542,8 +1527,8 @@ Camera:
   m_GameObject: {fileID: 1389785309}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.8962264, g: 0.09638655, b: 0.09638655, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1583,8 +1568,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389785309}
-  m_LocalRotation: {x: 0.25918278, y: -0.008531422, z: 0.002289527, w: 0.96578795}
-  m_LocalPosition: {x: 35.29833, y: 4.51, z: 6.67078}
+  m_LocalRotation: {x: 0.25918278, y: -0.0085310545, z: 0.002289428, w: 0.96578795}
+  m_LocalPosition: {x: 35.298325, y: 4.51, z: 6.67078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1701,14 +1686,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373333832}
     m_Modifications:
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 9137807055262805646}
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: enemyStatus
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1835,7 +1812,7 @@ MonoBehaviour:
   m_BindingMode: 5
   m_FollowOffset: {x: 0, y: 4.5, z: -5}
   m_XDamping: 1
-  m_YDamping: 1
+  m_YDamping: 0
   m_ZDamping: 1
   m_AngularDampingMode: 0
   m_PitchDamping: 0
@@ -2122,7 +2099,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599185911}
-  m_LocalRotation: {x: 0.25918272, y: -0.008531421, z: 0.0022895257, w: 0.96578795}
+  m_LocalRotation: {x: 0.25918272, y: -0.008531053, z: 0.0022894277, w: 0.96578795}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2143,14 +2120,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373333832}
     m_Modifications:
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 9137807055262805646}
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: enemyStatus
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2277,7 +2246,7 @@ MonoBehaviour:
     Value: 0.5
     m_SpeedMode: 0
     m_MaxSpeed: 0
-    m_AccelTime: 0.2
+    m_AccelTime: 0
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
@@ -2293,8 +2262,8 @@ MonoBehaviour:
       m_LegacyVelocityFilterStrength: -1
   m_YAxisRecentering:
     m_enabled: 0
-    m_WaitTime: 1
-    m_RecenteringTime: 2
+    m_WaitTime: 0
+    m_RecenteringTime: 0
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
@@ -2347,7 +2316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792832631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.29833, y: 4.51, z: 6.67078}
+  m_LocalPosition: {x: 35.298325, y: 4.51, z: 6.67078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2364,14 +2333,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373333832}
     m_Modifications:
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 9137807055262805646}
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: enemyStatus
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -4410,18 +4371,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1373333832}
     m_Modifications:
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: enemyType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 9137807055262805646}
-    - target: {fileID: 4700940078769435757, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
-      propertyPath: enemyStatus
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5095718958759462816, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4470,7 +4419,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gargoyle_FBX
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0192486464852fa4a91626f2f60e60f0, type: 3}
 --- !u!4 &4755464107311426516
 Transform:
@@ -5999,7 +5949,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &9137807055262805647
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6016,7 +5966,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &9137807055262805648
 MonoBehaviour:
   m_ObjectHideFlags: 0
